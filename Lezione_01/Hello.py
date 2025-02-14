@@ -5,3 +5,4 @@ if x<5:
     print("Sei un grande")
 elif x>5:
     print ("No fra") 
+print("Hai finito")
