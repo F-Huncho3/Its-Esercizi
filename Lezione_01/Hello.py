@@ -1,5 +1,5 @@
 
-x= (int(input("Metti un numero")))
+x:int = (int(input("Metti un numero")))
 
 if x<5:
     print("Sei un grande")
