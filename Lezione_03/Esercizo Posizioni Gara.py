@@ -6,7 +6,10 @@ if n == 1:
 elif n == 2:
     print("2nd")
 
-elif n >= 3:
+elif n == 3:
+    print ("3rd")
+
+elif n >= 4:
     print(f"{n}th")
 
 else:
