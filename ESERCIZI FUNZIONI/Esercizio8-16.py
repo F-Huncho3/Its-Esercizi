@@ -30,7 +30,7 @@ from printing_functions import printing_func as fn
 
 
 #Fourth Approach:
-#Scelta del "modulo" da importare come modulo/main
+#Scelta del "modulo" da importare come modulo
 import printing_functions as mn
 
 
