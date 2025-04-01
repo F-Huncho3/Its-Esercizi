@@ -36,92 +36,93 @@
 '''
  
 
-    
+tax = 0
+
+total = 0
+
+discount = 0
+
+scelta = 10
+
+lista_prodotti = []
 #FUNZIONE PRODOTTO
 
-def new_product (product_name:str, quantity:int, price:float):
+def new_product (product_name:str, quantity:int, price:float ) -> dict:
 
-    product_name = {quantity : price}
+    product_name:dict = {"product name": product_name, "Quantity" : quantity, "Price" : price}
 
     return product_name
 
-input_name = str(input("Inserisci il nome del prodotto "))
 
-quantity_number = int(input("Inserisci la quantità "))
+def shopping_cart():
 
-price_number = float(input("Inserisci il prezzo "))
-
-
-def shopping_cart ():
-
-    lista_elimina = []
-
+    #Inseriamo un messaggio per far decidere allo user cosa fare
     total = 0
+    
+    
 
-    print()
+    scelta:int = int(input("Inserisci la scelta"))
 
-    product_list:list[dict] = []
+    match scelta:
 
-    choice = input("Cosa vuoi inserire")
+        case 1: #aggiungiamo al carrello il prodotto.
 
-    while choice != 0:
+            product_name:str = str(input("Inserisci il nome del prodotto"))
+            quantity:int = int(input("Inserisci la quantità di oggetti"))
+            price : float = float(input("Inserisci il prezzo"))
+
+            lista_prodotti.append(new_product(product_name,quantity,price))
+ 
+            
+            total += quantity*price
+            print (total,lista_prodotti)
+
+            
+            
 
 
-        match choice:
-
-            case 1:
-                product_list.append(new_product(input_name = str(input("Inserisci il nome del prodotto "), 
-                quantity_number = int(input("Inserisci la quantità ")), 
-                price_number = float(input("Inserisci il prezzo ")) )))
-
-                total += (quantity_number * price_number)
 
         
-            case 2:
-
-                counter =  1
-
-                for product in product_list:
-
-                    print (counter, product)
-
-                    counter += 1 
-
-                print("\nQuesti sono i prodotti del tuo carrello")
-
-
-
-            case 3 :
-
-                print ("Scegli quale prodotto vuoi eliminare  ")
-
-                counter =  1
-
-                for counter,product in product_list:
-
-                    print (counter, product)
-
-                    counter += 1 
-
-                elimina = 0
-
-                elemina = int(input("Inserisci il numero del prodotto "))
-
-                
-
-
-
-                
-
-                product_list.pop(elimina -1 )
-
-                
 
             
 
             
 
-                
+            
+
+        #case 2: #eliminiamo un prodotto dal carrello
+
+            #elimina:str = str(input("Scegli il prodotto che vuoi eliminare"))
+
+            #for product in lista_prodotti:
+
+                #if elimina == product_name:
+
+                    #total -= product_name["Quantity"] * product_name["Price"]
+
+                #else:
+
+                    #pass
+
+    return total,lista_prodotti
+
+
+for i in range (0,3):
+
+    print(shopping_cart(total))
+
+
+
+
+
+
+
+
+    
+
+        
+
+
 
 
 

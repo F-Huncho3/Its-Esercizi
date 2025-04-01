@@ -18,4 +18,15 @@ class User:
         print (f"Age: {self.age}")
 
 
-        
+    def greet_user(self):
+
+        print (f"Hello {self.first_name} {self.last_name}, you said you're {self.age} years old.")
+
+
+
+
+fm:User = User ("Francesco","Magno","Worker",21)
+
+fm.describe_user()
+
+fm.greet_user()
