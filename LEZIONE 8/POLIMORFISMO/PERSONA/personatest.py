@@ -17,7 +17,7 @@ fm.displayData()
 print ("-----------------")
 '''''
 #Dal file persona2 importiamo persona.
-from persona2 import Persona
+from POLIMORFISMO.PERSONA.persona2 import Persona
 
 
 fm:Persona = Persona()

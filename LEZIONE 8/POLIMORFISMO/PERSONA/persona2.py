@@ -1,10 +1,10 @@
 class Persona:
 
-    def __init__(self):
+    def __init__(self, name:str, lastname:str, age:int):
 
-        self.name:str = ""
-        self.lastname:str = ""
-        self.age:int = 0
+        self.name:str = name
+        self.lastname:str = lastname
+        self.age:int = age
 
     def displayData(self) -> None:
 
@@ -48,6 +48,13 @@ class Persona:
 
         return self.age
     
+    def __str__(self) ->str:
+
+        return f"{self.name}\n{self.lastname}\n{self.age}"
+    
+
+    def speak(self) ->None:
+        print(f"\nHello! My name is {self.getName()}!\n")
 
 
 

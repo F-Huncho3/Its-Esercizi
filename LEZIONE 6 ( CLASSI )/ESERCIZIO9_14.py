@@ -13,6 +13,8 @@ class LotteryMachine:
 
     def pick4char(self):
 
+        self.winning_list(len)
+
         for x in range(1,5):
 
             self.winning_list.append(self.numbersandletters_list[random.randint(0,14)])
