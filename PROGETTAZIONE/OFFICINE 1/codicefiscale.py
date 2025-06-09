@@ -16,7 +16,7 @@ class CodiceFiscale:
         
         else:
 
-            raise TypeError ("Codice Fiscale Invalido")
+            raise ValueError ("Codice Fiscale Invalido")
         
    
         

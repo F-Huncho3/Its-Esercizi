@@ -16,7 +16,7 @@ class Targa:
         
         else:
 
-            raise TypeError ("Targa Invalida")
+            raise ValueError ("Targa Invalida")
         
 
     
